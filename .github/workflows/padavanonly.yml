@@ -15,11 +15,6 @@ name: OpenWrt padavanonly
 on:
   repository_dispatch:
   workflow_dispatch:
-  inputs:
-      LAN_IP:
-        description: 'Set LAN IP Address'
-        required: true
-        default: '192.168.8.1'
 
 env:
   REPO_URL: https://github.com/padavanonly/immortalwrt-mt798x-24.10
@@ -83,11 +78,6 @@ jobs:
         chmod +x $DIY_P2_SH
         cd openwrt
         $GITHUB_WORKSPACE/$DIY_P2_SH
-
-    - name: 设置LAN IP地址（路由器登录地址）
-      run: |
-        cd openwrt
-        SET_IP=${{ github.event.inputs.LAN_IP }}
 
     - name: Download package
       id: package
