@@ -10,7 +10,7 @@
 # See /LICENSE for more information.
 #
 
-name: OpenWrt Builder test 
+name: OpenWrt padavanonly 
 
 on:
   repository_dispatch:
